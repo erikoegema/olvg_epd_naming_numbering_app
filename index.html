@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OLVG EPD Naming and numbering app</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>OLVG EPD Naming and numbering app</h1>
+        <form id="inputForm">
+            <div class="form-group">
+                <label for="application">Application:</label>
+                <select id="application" name="application">
+                    <option value="">Select Application</option>
+                    <option value="Anesthesia">Anesthesia</option>
+                    <option value="ASAP">ASAP</option>
+                    <option value="Beacon">Beacon</option>
+                    <option value="Bugsy">Bugsy</option>
+                    <option value="Cadence">Cadence</option>
+                    <option value="Cupid">Cupid</option>
+                    <option value="Data Courier">Data Courier</option>
+                    <option value="DBC">DBC</option>
+                    <option value="EpicCare Inpatient">EpicCare Inpatient</option>
+                    <option value="EpicCare Ambulatory">EpicCare Ambulatory</option>
+                    <option value="EpicCare Link">EpicCare Link</option>
+                    <option value="Grand Central">Grand Central</option>
+                    <option value="HIM">HIM</option>
+                    <option value="Identity">Identity</option>
+                    <option value="Kaleidoscope">Kaleidoscope</option>
+                    <option value="MyChart">MyChart</option>
+                    <option value="Optime">Optime</option>
+                    <option value="Orders">Orders</option>
+                    <option value="Prelude">Prelude</option>
+                    <option value="Radiant">Radiant</option>
+                    <option value="Reporting">Reporting</option>
+                    <option value="Research">Research</option>
+                    <option value="Stork">Stork</option>
+                    <option value="Willow/Apotheek">Willow/Apotheek</option>
+                    <option value="Zorgpaden">Zorgpaden</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="ini">INI:</label>
+                <input type="text" id="ini" name="ini" required>
+            </div>
+            <div class="form-group">
+                <label for="prefix">Prefix:</label>
+                <input type="number" id="prefix" name="prefix" required>
+            </div>
+            <div class="form-group">
+                <label for="startNumber">Start Number:</label>
+                <input type="number" id="startNumber" name="startNumber" required>
+            </div>
+            <div class="form-group">
+                <label for="totalResults">Total Number of Results:</label>
+                <input type="number" id="totalResults" name="totalResults" required>
+            </div>
+            <div class="form-group">
+                <label for="naming">Naming:</label>
+                <input type="text" id="naming" name="naming">
+            </div>
+            <div class="button-group-submit">
+                <button type="submit" class="btn">Submit</button>
+                <button type="button" class="btn" id="openZenyaButton">Open Zenya Naming and Numbering</button>
+            </div>
+        </form>
+        <table id="resultTable">
+            <thead>
+                <tr>
+                    <th>INI</th>
+                    <th>Final Number</th>
+                    <th>Naming</th>
+                </tr>
+            </thead>
+            <tbody>
+            </tbody>
+        </table>
+        <div class="button-group">
+            <button id="saveButton" class="btn">Save Table</button>
+            <button id="exportButton" class="btn">Export to XML</button>
+            <button id="emptyButton" class="btn">Empty Table</button>
+        </div>
+    </div>
+    <script src="applications.js"></script>
+    <script src="scripts.js"></script>
+</body>
+</html>
